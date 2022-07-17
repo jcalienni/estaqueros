@@ -17,12 +17,16 @@
     </div>
 </header>
 <body>
-    
+<form action="http://127.0.0.1:5000/resumen" method="post">    
     {% for test in range(0, cantidad) %}
-        <input type="text" name={{loop.index}} placeholder="nombre">
-        <input type="text" name={{loop.index}} placeholder="$ que puso">
+        <input type="text" name="p{{loop.index}}" id = "nombre" placeholder="nombre" required>
+        <input type="number" name="c{{loop.index}}" id = "precio" placeholder="$ que puso" required>        
         <br>
     {% endfor %}
+    <br>
+
+    <input type="submit" value="Siguiente">
+</form>
     
 </body>
 </html>
